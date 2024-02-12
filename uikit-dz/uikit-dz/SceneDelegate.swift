@@ -4,11 +4,11 @@
 import UIKit
 
 // UIResponder, UIWindowSceneDelegate
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-//    var window: UIWindow?
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    var window: UIWindow?
 
     func scene(
-        _: UIScene,
+        _ scene: UIScene,
         willConnectTo _: UISceneSession,
         options _: UIScene.ConnectionOptions
     ) {

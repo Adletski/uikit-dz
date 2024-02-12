@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0B07F22B7A08AA00B71D9A /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B07F12B7A08AA00B71D9A /* AudioViewController.swift */; };
+		7F0B07F42B7A0AE200B71D9A /* rington1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B07F32B7A0AE200B71D9A /* rington1.mp3 */; };
+		7F0B07F72B7A0B6500B71D9A /* rington3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B07F52B7A0B6500B71D9A /* rington3.mp3 */; };
+		7F0B07F82B7A0B6500B71D9A /* rington2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B07F62B7A0B6500B71D9A /* rington2.mp3 */; };
 		7F42F90E2B715F4F003B96B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F42F90D2B715F4F003B96B7 /* AppDelegate.swift */; };
 		7F42F9102B715F4F003B96B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F42F90F2B715F4F003B96B7 /* SceneDelegate.swift */; };
-		7F42F9122B715F4F003B96B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F42F9112B715F4F003B96B7 /* ViewController.swift */; };
+		7F42F9122B715F4F003B96B7 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F42F9112B715F4F003B96B7 /* PlaylistViewController.swift */; };
 		7F42F9152B715F4F003B96B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F42F9132B715F4F003B96B7 /* Main.storyboard */; };
 		7F42F9172B715F50003B96B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F42F9162B715F50003B96B7 /* Assets.xcassets */; };
 		7F42F91A2B715F50003B96B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F42F9182B715F50003B96B7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F0B07F12B7A08AA00B71D9A /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		7F0B07F32B7A0AE200B71D9A /* rington1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rington1.mp3; sourceTree = "<group>"; };
+		7F0B07F52B7A0B6500B71D9A /* rington3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rington3.mp3; sourceTree = "<group>"; };
+		7F0B07F62B7A0B6500B71D9A /* rington2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rington2.mp3; sourceTree = "<group>"; };
 		7F42F90A2B715F4F003B96B7 /* uikit-dz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uikit-dz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F42F90D2B715F4F003B96B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F42F90F2B715F4F003B96B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F42F9112B715F4F003B96B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F42F9112B715F4F003B96B7 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		7F42F9142B715F4F003B96B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F42F9162B715F50003B96B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F42F9192B715F50003B96B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,11 +66,15 @@
 			children = (
 				7F42F90D2B715F4F003B96B7 /* AppDelegate.swift */,
 				7F42F90F2B715F4F003B96B7 /* SceneDelegate.swift */,
-				7F42F9112B715F4F003B96B7 /* ViewController.swift */,
+				7F42F9112B715F4F003B96B7 /* PlaylistViewController.swift */,
 				7F42F9132B715F4F003B96B7 /* Main.storyboard */,
 				7F42F9162B715F50003B96B7 /* Assets.xcassets */,
 				7F42F9182B715F50003B96B7 /* LaunchScreen.storyboard */,
 				7F42F91B2B715F50003B96B7 /* Info.plist */,
+				7F0B07F12B7A08AA00B71D9A /* AudioViewController.swift */,
+				7F0B07F32B7A0AE200B71D9A /* rington1.mp3 */,
+				7F0B07F62B7A0B6500B71D9A /* rington2.mp3 */,
+				7F0B07F52B7A0B6500B71D9A /* rington3.mp3 */,
 			);
 			path = "uikit-dz";
 			sourceTree = "<group>";
@@ -127,9 +139,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F0B07F42B7A0AE200B71D9A /* rington1.mp3 in Resources */,
+				7F0B07F82B7A0B6500B71D9A /* rington2.mp3 in Resources */,
 				7F42F91A2B715F50003B96B7 /* LaunchScreen.storyboard in Resources */,
 				7F42F9172B715F50003B96B7 /* Assets.xcassets in Resources */,
 				7F42F9152B715F4F003B96B7 /* Main.storyboard in Resources */,
+				7F0B07F72B7A0B6500B71D9A /* rington3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F42F9122B715F4F003B96B7 /* ViewController.swift in Sources */,
+				7F42F9122B715F4F003B96B7 /* PlaylistViewController.swift in Sources */,
+				7F0B07F22B7A08AA00B71D9A /* AudioViewController.swift in Sources */,
 				7F42F90E2B715F4F003B96B7 /* AppDelegate.swift in Sources */,
 				7F42F9102B715F4F003B96B7 /* SceneDelegate.swift in Sources */,
 			);
