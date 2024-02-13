@@ -25,7 +25,7 @@ class RegistrationScreen: UIViewController {
         customizeScreen()
         setUplabel()
         tuneTextField()
-        setupView()
+        setupViewLineOne()
         setupButtonEyE()
         setupLabelLogin()
         setupImageTitle()
@@ -97,7 +97,7 @@ class RegistrationScreen: UIViewController {
         viewAuthorization.addSubview(textFieldPassword)
     }
 
-    private func setupView() {
+    private func setupViewLineOne() {
         viewLineOne = UIView(frame: CGRect(x: 20, y: 138, width: 335, height: 1))
         viewLineOne.backgroundColor = UIColor(red: 208 / 255, green: 214 / 255, blue: 220 / 255, alpha: 1)
         viewAuthorization.addSubview(viewLineOne)
