@@ -4,7 +4,7 @@
 import UIKit
 
 /// класс
-class RegistrationMenu: UIViewController {
+final class RegistrationMenu: UIViewController {
     var nameSignboardImageView = UIImageView()
     var markImageView = UIImageView()
     var menuImageView = UIImageView()
@@ -50,6 +50,8 @@ class RegistrationMenu: UIViewController {
         setupLabelnameOfProducts()
     }
 
+    // MARK: Private Methods
+
     private func setupLabelnameOfProducts() {
         pieLabel = UILabel(frame: CGRect(x: 25, y: 30, width: 220, height: 19))
         pieLabel.text = "Пти пате аля «РюсЪ»"
@@ -76,6 +78,8 @@ class RegistrationMenu: UIViewController {
         subViewCofe.addSubview(cofeLabel)
     }
 
+    // MARK: Private Methods
+
     private func setupImageViewProducts() {
         pieViewImage = UIImageView(frame: CGRect(x: 252, y: 5, width: 70, height: 70))
         pieViewImage.image = pieImage
@@ -89,6 +93,8 @@ class RegistrationMenu: UIViewController {
         cofeViewImage.image = cofeImage
         subViewCofe.addSubview(cofeViewImage)
     }
+
+    // MARK: Private Methods
 
     private func setupSubView() {
         subViewPie = UIView(frame: CGRect(x: 20, y: 216, width: 335, height: 80))
@@ -107,6 +113,8 @@ class RegistrationMenu: UIViewController {
         viewAuthorization.addSubview(subViewhotDrinks)
     }
 
+    // MARK: Private Methods
+
     private func customizeScreen() {
         viewAuthorization = UIView(frame: CGRect(x: 0, y: 248, width: view.frame.width, height: 564))
         viewAuthorization.backgroundColor = .white
@@ -115,6 +123,8 @@ class RegistrationMenu: UIViewController {
         viewAuthorization.clipsToBounds = true
         view.addSubview(viewAuthorization)
     }
+
+    // MARK: Private Methods
 
     private func customizeHomeScreenBackground() {
         view.backgroundColor = UIColor(red: 120 / 255, green: 84 / 255, blue: 49 / 255, alpha: 1)
@@ -125,6 +135,8 @@ class RegistrationMenu: UIViewController {
         nameSignboardImageView.image = nameSignboardImage
         view.addSubview(nameSignboardImageView)
     }
+
+    // MARK: Private Methods
 
     private func setupImageMenu() {
         menuImageView = UIImageView(frame: CGRect(x: 125, y: 122, width: 125, height: 80))
@@ -138,6 +150,8 @@ class RegistrationMenu: UIViewController {
         viewLayer.addSubview(markImageView)
     }
 
+    // MARK: Private Methods
+
     private func setupLabel() {
         labelWelcome = UILabel(frame: CGRect(x: 20, y: 147, width: 185, height: 44))
         labelWelcome.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.8)
@@ -147,6 +161,8 @@ class RegistrationMenu: UIViewController {
         labelWelcome.numberOfLines = 2
         view.addSubview(labelWelcome)
     }
+
+    // MARK: Private Methods
 
     private func setupLabelCharacter() {
         labelText = UILabel(frame: CGRect(x: 0, y: 0, width: 44, height: 19))
@@ -158,6 +174,8 @@ class RegistrationMenu: UIViewController {
         labelText.center = CGPoint(x: viewBackground.bounds.width / 2, y: viewBackground.bounds.height / 2)
         viewBackground.addSubview(labelText)
     }
+
+    // MARK: Private Methods
 
     private func setupTextLabelAdress() {
         textLabelAddress = UILabel(frame: CGRect(x: 15, y: 12, width: 150, height: 15))
@@ -176,6 +194,8 @@ class RegistrationMenu: UIViewController {
         viewLayer.addSubview(subtextLabel)
     }
 
+    // MARK: Private Methods
+
     private func setupView() {
         viewBackground = UIView(frame: CGRect(x: 311, y: 147, width: 44, height: 44))
         viewBackground.backgroundColor = UIColor(red: 89 / 255, green: 190 / 255, blue: 199 / 255, alpha: 1)
@@ -183,7 +203,9 @@ class RegistrationMenu: UIViewController {
         view.addSubview(viewBackground)
     }
 
-    func customView() {
+    // MARK: Private Methods
+
+    private func customView() {
         viewLayer = UIView(frame: CGRect(x: 20, y: 40, width: 335, height: 70))
         viewLayer.backgroundColor = UIColor(red: 235 / 255, green: 246 / 255, blue: 247 / 255, alpha: 1)
         viewLayer.layer.cornerRadius = 16
