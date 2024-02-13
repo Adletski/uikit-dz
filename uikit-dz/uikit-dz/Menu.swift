@@ -73,6 +73,7 @@ final class Menu: UIViewController {
         buttonCofe = UIButton(frame: CGRect(x: 20, y: 416, width: 335, height: 80))
         buttonCofe.backgroundColor = UIColor(red: 225 / 255, green: 194 / 255, blue: 160 / 255, alpha: 0.7)
         buttonCofe.layer.cornerRadius = 16
+        buttonCofe.addTarget(self, action: #selector(buttonCoffePressed), for: .touchUpInside)
         viewAuthorization.addSubview(buttonCofe)
     }
 
@@ -207,5 +208,9 @@ final class Menu: UIViewController {
         viewLayer.backgroundColor = UIColor(red: 235 / 255, green: 246 / 255, blue: 247 / 255, alpha: 1)
         viewLayer.layer.cornerRadius = 16
         viewAuthorization.addSubview(viewLayer)
+    }
+
+    @objc func buttonCoffePressed() {
+        navigationController?.pushViewController(ChooseCoffeeViewController(), animated: true)
     }
 }
