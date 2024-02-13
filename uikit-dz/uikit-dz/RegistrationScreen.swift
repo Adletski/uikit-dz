@@ -9,13 +9,14 @@ class RegistrationScreen: UIViewController {
     var labelAuthorization = UILabel()
     var labelLogin = UILabel()
     var labelPassword = UILabel()
-    var labelSignboard = UILabel()
     var textFieldLogin = UITextField()
     var textFieldPassword = UITextField()
     var viewLineOne = UIView()
     var viewLineTwo = UIView()
     var buttonEyE = UIButton()
     var buttonWelcome = UIButton()
+    var imageViewTitle = UIImageView()
+    var imageTitle = UIImage(named: "title")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +27,17 @@ class RegistrationScreen: UIViewController {
         tuneTextField()
         setupView()
         setupButtonEyE()
+        setupLabelLogin()
+        setupImageTitle()
     }
 
     // MARK: Private Func
+
+    private func setupImageTitle() {
+        imageViewTitle = UIImageView(frame: CGRect(x: 100, y: 103, width: 175, height: 76))
+        imageViewTitle.image = imageTitle
+        view.addSubview(imageViewTitle)
+    }
 
     private func customizeHomeScreenBackground() {
         view.backgroundColor = UIColor(red: 120 / 255, green: 84 / 255, blue: 49 / 255, alpha: 1)
@@ -44,6 +53,17 @@ class RegistrationScreen: UIViewController {
         view.addSubview(viewAuthorization)
     }
 
+    private func setupLabelLogin() {
+        labelLogin = UILabel(frame: CGRect(x: 20, y: 84, width: 175, height: 19))
+        labelLogin.textColor = UIColor(red: 17 / 255, green: 17 / 255, blue: 17 / 255, alpha: 1)
+        labelLogin.shadowColor = .black
+        labelLogin.shadowOffset = CGSize(width: 1, height: 1)
+        labelLogin.textAlignment = .left
+        labelLogin.text = "Логин"
+        labelLogin.font = UIFont(name: "Verdana", size: 16)
+        viewAuthorization.addSubview(labelLogin)
+    }
+
     private func setUplabel() {
         labelAuthorization = UILabel(frame: CGRect(x: 20, y: 32, width: 195, height: 31))
         labelAuthorization.textColor = UIColor(red: 17 / 255, green: 17 / 255, blue: 17 / 255, alpha: 1)
@@ -53,28 +73,14 @@ class RegistrationScreen: UIViewController {
         labelAuthorization.shadowOffset = CGSize(width: 1, height: 1)
         viewAuthorization.addSubview(labelAuthorization)
 
-        labelLogin = UILabel(frame: CGRect(x: 20, y: 84, width: 175, height: 19))
-        labelLogin.textColor = UIColor(red: 17 / 255, green: 17 / 255, blue: 17 / 255, alpha: 1)
-        labelLogin.shadowColor = .black
-        labelLogin.shadowOffset = CGSize(width: 1, height: 1)
-        labelLogin.text = "Логин"
-        labelLogin.font = UIFont(name: "Verdana", size: 16)
-        viewAuthorization.addSubview(labelLogin)
-
         labelPassword = UILabel(frame: CGRect(x: 20, y: 159, width: 175, height: 19))
         labelPassword.textColor = UIColor(red: 17 / 255, green: 17 / 255, blue: 17 / 255, alpha: 1)
         labelPassword.shadowColor = .black
         labelPassword.shadowOffset = CGSize(width: 1, height: 1)
         labelPassword.text = "Пароль"
+        labelPassword.textAlignment = .left
         labelPassword.font = UIFont(name: "Verdana", size: 16)
         viewAuthorization.addSubview(labelPassword)
-
-        labelSignboard = UILabel(frame: CGRect(x: 100, y: 103, width: 175, height: 76))
-        labelSignboard.textColor = UIColor(red: 207 / 255, green: 180 / 255, blue: 150 / 255, alpha: 1)
-        labelSignboard.text = "КофеиновЪ"
-        labelSignboard.font = UIFont(name: "AmaticSC-Regular", size: 40)
-        labelLogin.textAlignment = .center
-        view.addSubview(labelSignboard)
     }
 
     private func tuneTextField() {
