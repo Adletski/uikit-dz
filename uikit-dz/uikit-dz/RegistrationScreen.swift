@@ -86,10 +86,14 @@ class RegistrationScreen: UIViewController {
     private func tuneTextField() {
         textFieldLogin = UITextField(frame: CGRect(x: 20, y: 113, width: 175, height: 17))
         textFieldLogin.placeholder = "введите почту"
+        textFieldLogin.addTarget(self, action: #selector(activateButton), for: .editingChanged)
         viewAuthorization.addSubview(textFieldLogin)
 
         textFieldPassword = UITextField(frame: CGRect(x: 20, y: 188, width: 175, height: 17))
         textFieldPassword.placeholder = "введите пароль"
+        textFieldPassword.addTarget(self, action: #selector(activateButton), for: .editingChanged)
+        textFieldPassword.isSecureTextEntry = true
+        textFieldPassword.textContentType = .oneTimeCode
         viewAuthorization.addSubview(textFieldPassword)
     }
 
@@ -106,14 +110,37 @@ class RegistrationScreen: UIViewController {
     private func setupButtonEyE() {
         buttonEyE = UIButton(frame: CGRect(x: 332, y: 185, width: 22, height: 19))
         buttonEyE.setImage(UIImage(named: "eye"), for: .normal)
+        buttonEyE.addTarget(self, action: #selector(hidePassword), for: .touchUpInside)
         viewAuthorization.addSubview(buttonEyE)
 
         buttonWelcome = UIButton(frame: CGRect(x: 20, y: 416, width: 335, height: 44))
-        buttonWelcome.backgroundColor = UIColor(red: 89 / 255, green: 190 / 255, blue: 199 / 255, alpha: 1)
+        buttonWelcome.backgroundColor = UIColor(red: 89 / 255, green: 190 / 255, blue: 199 / 255, alpha: 0.4)
         buttonWelcome.setTitle("Войти", for: .normal)
         buttonWelcome.setTitleColor(UIColor(red: 255 / 255, green: 253 / 255, blue: 253 / 255, alpha: 1), for: .normal)
+        buttonWelcome.addTarget(self, action: #selector(translition), for: .touchUpInside)
         buttonWelcome.titleLabel?.font = UIFont(name: "Verdana", size: 16)
         buttonWelcome.layer.cornerRadius = 12
+        buttonWelcome.isEnabled = false
         viewAuthorization.addSubview(buttonWelcome)
+    }
+
+    @objc private func translition() {
+        let example = RegistrationMenu()
+        present(example, animated: true)
+    }
+
+    @objc private func hidePassword(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        textFieldPassword.isSecureTextEntry = !sender.isSelected
+    }
+
+    @objc private func activateButton() {
+        if let text = textFieldLogin.text, !text.isEmpty, let textTwo = textFieldPassword.text, !textTwo.isEmpty {
+            buttonWelcome.isEnabled = true
+            buttonWelcome.backgroundColor = UIColor(red: 89 / 255, green: 190 / 255, blue: 199 / 255, alpha: 1)
+        } else {
+            buttonWelcome.isEnabled = false
+            buttonWelcome.backgroundColor = UIColor(red: 89 / 255, green: 190 / 255, blue: 199 / 255, alpha: 0.4)
+        }
     }
 }
