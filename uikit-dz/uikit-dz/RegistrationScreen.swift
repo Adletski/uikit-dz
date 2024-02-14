@@ -4,7 +4,7 @@
 import UIKit
 
 /// класс
-class RegistrationScreen: UIViewController {
+final class RegistrationScreen: UIViewController {
     var viewAuthorization = UIView()
     var labelAuthorization = UILabel()
     var labelLogin = UILabel()
@@ -35,20 +35,19 @@ class RegistrationScreen: UIViewController {
 
     // MARK: Private Methods
 
+    ///  настройка image
     private func setupImageTitle() {
         imageViewTitle = UIImageView(frame: CGRect(x: 100, y: 103, width: 175, height: 76))
         imageViewTitle.image = imageTitle
         view.addSubview(imageViewTitle)
     }
 
-    // MARK: Private Methods
-
+    /// настройка фона
     private func customizeHomeScreenBackground() {
         view.backgroundColor = UIColor(red: 120 / 255, green: 84 / 255, blue: 49 / 255, alpha: 1)
     }
 
-    // MARK: Private Methods
-
+    /// настрйока белого фона
     private func customizeScreen() {
         viewAuthorization = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 564))
         viewAuthorization.backgroundColor = .white
@@ -59,8 +58,7 @@ class RegistrationScreen: UIViewController {
         view.addSubview(viewAuthorization)
     }
 
-    // MARK: Private Methods
-
+    /// настройка метки для Логина
     private func setupLabelLogin() {
         labelLogin = UILabel(frame: CGRect(x: 20, y: 84, width: 175, height: 19))
         labelLogin.textColor = UIColor(red: 17 / 255, green: 17 / 255, blue: 17 / 255, alpha: 1)
@@ -72,8 +70,7 @@ class RegistrationScreen: UIViewController {
         viewAuthorization.addSubview(labelLogin)
     }
 
-    // MARK: Private Methods
-
+    /// настройка метки Авторизации и метки Пароля
     private func setUplabel() {
         labelAuthorization = UILabel(frame: CGRect(x: 20, y: 32, width: 195, height: 31))
         labelAuthorization.textColor = UIColor(red: 17 / 255, green: 17 / 255, blue: 17 / 255, alpha: 1)
@@ -93,8 +90,7 @@ class RegistrationScreen: UIViewController {
         viewAuthorization.addSubview(labelPassword)
     }
 
-    // MARK: Private Methods
-
+    /// настройка Текстового поля
     private func tuneTextField() {
         textFieldLogin = UITextField(frame: CGRect(x: 20, y: 113, width: 175, height: 17))
         textFieldLogin.placeholder = "введите почту"
@@ -109,8 +105,7 @@ class RegistrationScreen: UIViewController {
         viewAuthorization.addSubview(textFieldPassword)
     }
 
-    // MARK: Private Methods
-
+    /// настройка линий подчеркивания
     private func setupViewLineOne() {
         viewLineOne = UIView(frame: CGRect(x: 20, y: 138, width: 335, height: 1))
         viewLineOne.backgroundColor = UIColor(red: 208 / 255, green: 214 / 255, blue: 220 / 255, alpha: 1)
@@ -121,8 +116,7 @@ class RegistrationScreen: UIViewController {
         viewAuthorization.addSubview(viewLineTwo)
     }
 
-    // MARK: Private Methods
-
+    /// настройка кнопок
     private func setupButtonEyE() {
         buttonEyE = UIButton(frame: CGRect(x: 332, y: 185, width: 22, height: 19))
         buttonEyE.setImage(UIImage(named: "eye"), for: .normal)
@@ -140,22 +134,19 @@ class RegistrationScreen: UIViewController {
         viewAuthorization.addSubview(buttonWelcome)
     }
 
-    // MARK: Private Methods
-
+    /// переход на экран
     @objc private func translition() {
         let example = RegistrationMenu()
         present(example, animated: true)
     }
 
-    // MARK: Private Methods
-
+    /// для скрытия и показа пароля
     @objc private func hidePassword(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         textFieldPassword.isSecureTextEntry = !sender.isSelected
     }
 
-    // MARK: Private Methods
-
+    /// смена активности кнопки
     @objc private func activateButton() {
         if let text = textFieldLogin.text, !text.isEmpty, let textTwo = textFieldPassword.text, !textTwo.isEmpty {
             buttonWelcome.isEnabled = true

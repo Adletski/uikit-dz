@@ -25,7 +25,7 @@ final class RegistrationMenu: UIViewController {
     var textLabelAddress = UILabel()
     var subtextLabel = UILabel()
     var subViewPie = UIView()
-    var subViewCofe = UIView()
+    var buttonCofe = UIButton()
     var subViewhotDrinks = UIView()
     var pieLabel = UILabel()
     var cofeLabel = UILabel()
@@ -48,10 +48,21 @@ final class RegistrationMenu: UIViewController {
         setupSubView()
         setupImageViewProducts()
         setupLabelnameOfProducts()
+        setubBattonCofe()
+        setupCofeButtonImage()
     }
 
     // MARK: Private Methods
 
+    /// настройка кнопки Кофе
+    private func setubBattonCofe() {
+        buttonCofe = UIButton(frame: CGRect(x: 20, y: 416, width: 335, height: 80))
+        buttonCofe.backgroundColor = UIColor(red: 225 / 255, green: 194 / 255, blue: 160 / 255, alpha: 0.7)
+        buttonCofe.layer.cornerRadius = 16
+        viewAuthorization.addSubview(buttonCofe)
+    }
+
+    /// настройка меток
     private func setupLabelnameOfProducts() {
         pieLabel = UILabel(frame: CGRect(x: 25, y: 30, width: 220, height: 19))
         pieLabel.text = "Пти пате аля «РюсЪ»"
@@ -68,18 +79,9 @@ final class RegistrationMenu: UIViewController {
         teaLabel.shadowOffset = CGSize(width: 0.5, height: 0.5)
         teaLabel.textAlignment = .left
         subViewhotDrinks.addSubview(teaLabel)
-
-        cofeLabel = UILabel(frame: CGRect(x: 25, y: 30, width: 180, height: 19))
-        cofeLabel.text = "Горячiя напитки"
-        cofeLabel.font = UIFont(name: "Verdana", size: 16)
-        cofeLabel.shadowColor = .black
-        cofeLabel.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        cofeLabel.textAlignment = .left
-        subViewCofe.addSubview(cofeLabel)
     }
 
-    // MARK: Private Methods
-
+    /// настройка image
     private func setupImageViewProducts() {
         pieViewImage = UIImageView(frame: CGRect(x: 252, y: 5, width: 70, height: 70))
         pieViewImage.image = pieImage
@@ -88,24 +90,29 @@ final class RegistrationMenu: UIViewController {
         teaViewImage = UIImageView(frame: CGRect(x: 252, y: 20, width: 70, height: 44))
         teaViewImage.image = teaImage
         subViewhotDrinks.addSubview(teaViewImage)
-
-        cofeViewImage = UIImageView(frame: CGRect(x: 252, y: 5, width: 70, height: 70))
-        cofeViewImage.image = cofeImage
-        subViewCofe.addSubview(cofeViewImage)
     }
 
-    // MARK: Private Methods
+    /// настройка метки и картинки для кнопки
+    func setupCofeButtonImage() {
+        cofeViewImage = UIImageView(frame: CGRect(x: 252, y: 5, width: 70, height: 70))
+        cofeViewImage.image = cofeImage
+        buttonCofe.addSubview(cofeViewImage)
 
+        cofeLabel = UILabel(frame: CGRect(x: 25, y: 30, width: 180, height: 19))
+        cofeLabel.text = "Кофий"
+        cofeLabel.font = UIFont(name: "Verdana", size: 16)
+        cofeLabel.shadowColor = .black
+        cofeLabel.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        cofeLabel.textAlignment = .left
+        buttonCofe.addSubview(cofeLabel)
+    }
+
+    /// настройка фона
     private func setupSubView() {
         subViewPie = UIView(frame: CGRect(x: 20, y: 216, width: 335, height: 80))
         subViewPie.backgroundColor = UIColor(red: 225 / 255, green: 194 / 255, blue: 160 / 255, alpha: 0.7)
         subViewPie.layer.cornerRadius = 16
         viewAuthorization.addSubview(subViewPie)
-
-        subViewCofe = UIView(frame: CGRect(x: 20, y: 416, width: 335, height: 80))
-        subViewCofe.backgroundColor = UIColor(red: 225 / 255, green: 194 / 255, blue: 160 / 255, alpha: 0.7)
-        subViewCofe.layer.cornerRadius = 16
-        viewAuthorization.addSubview(subViewCofe)
 
         subViewhotDrinks = UIView(frame: CGRect(x: 20, y: 316, width: 335, height: 80))
         subViewhotDrinks.backgroundColor = UIColor(red: 225 / 255, green: 194 / 255, blue: 160 / 255, alpha: 0.7)
@@ -113,8 +120,7 @@ final class RegistrationMenu: UIViewController {
         viewAuthorization.addSubview(subViewhotDrinks)
     }
 
-    // MARK: Private Methods
-
+    /// настрйока белого фона
     private func customizeScreen() {
         viewAuthorization = UIView(frame: CGRect(x: 0, y: 248, width: view.frame.width, height: 564))
         viewAuthorization.backgroundColor = .white
@@ -124,8 +130,7 @@ final class RegistrationMenu: UIViewController {
         view.addSubview(viewAuthorization)
     }
 
-    // MARK: Private Methods
-
+    /// настройка фона
     private func customizeHomeScreenBackground() {
         view.backgroundColor = UIColor(red: 120 / 255, green: 84 / 255, blue: 49 / 255, alpha: 1)
     }
@@ -136,22 +141,21 @@ final class RegistrationMenu: UIViewController {
         view.addSubview(nameSignboardImageView)
     }
 
-    // MARK: Private Methods
-
+    /// настройка image для вывески
     private func setupImageMenu() {
         menuImageView = UIImageView(frame: CGRect(x: 125, y: 122, width: 125, height: 80))
         menuImageView.image = menuImage
         viewAuthorization.addSubview(menuImageView)
     }
 
+    /// настройка image
     private func setupMarkImageView() {
         markImageView = UIImageView(frame: CGRect(x: 289.29, y: 19.92, width: 20.42, height: 29.17))
         markImageView.image = markImage
         viewLayer.addSubview(markImageView)
     }
 
-    // MARK: Private Methods
-
+    /// настройка метки Welcome
     private func setupLabel() {
         labelWelcome = UILabel(frame: CGRect(x: 20, y: 147, width: 185, height: 44))
         labelWelcome.textColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.8)
@@ -162,8 +166,7 @@ final class RegistrationMenu: UIViewController {
         view.addSubview(labelWelcome)
     }
 
-    // MARK: Private Methods
-
+    /// настройка метки буквы Г
     private func setupLabelCharacter() {
         labelText = UILabel(frame: CGRect(x: 0, y: 0, width: 44, height: 19))
         labelText.center = viewBackground.center
@@ -175,8 +178,7 @@ final class RegistrationMenu: UIViewController {
         viewBackground.addSubview(labelText)
     }
 
-    // MARK: Private Methods
-
+    /// настройка метки для Адресса и для доступа к геолокации
     private func setupTextLabelAdress() {
         textLabelAddress = UILabel(frame: CGRect(x: 15, y: 12, width: 150, height: 15))
         textLabelAddress.text = "Адреса кофеен"
@@ -194,8 +196,7 @@ final class RegistrationMenu: UIViewController {
         viewLayer.addSubview(subtextLabel)
     }
 
-    // MARK: Private Methods
-
+    /// настройка фона
     private func setupView() {
         viewBackground = UIView(frame: CGRect(x: 311, y: 147, width: 44, height: 44))
         viewBackground.backgroundColor = UIColor(red: 89 / 255, green: 190 / 255, blue: 199 / 255, alpha: 1)
@@ -203,8 +204,7 @@ final class RegistrationMenu: UIViewController {
         view.addSubview(viewBackground)
     }
 
-    // MARK: Private Methods
-
+    /// настройка фона
     private func customView() {
         viewLayer = UIView(frame: CGRect(x: 20, y: 40, width: 335, height: 70))
         viewLayer.backgroundColor = UIColor(red: 235 / 255, green: 246 / 255, blue: 247 / 255, alpha: 1)
