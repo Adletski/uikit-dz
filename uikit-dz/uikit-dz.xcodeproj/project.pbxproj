@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0B07DD2B78E5B900B71D9A /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B07DC2B78E5B900B71D9A /* DividerView.swift */; };
+		7F0B07DF2B78EB8400B71D9A /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B07DE2B78EB8400B71D9A /* BirthdayViewController.swift */; };
+		7F0B07E32B79029A00B71D9A /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B07E22B79029A00B71D9A /* NewUserViewController.swift */; };
+		7F0B07E62B7902CA00B71D9A /* IconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B07E52B7902CA00B71D9A /* IconImageView.swift */; };
+		7F0B07E82B7902EA00B71D9A /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B07E72B7902EA00B71D9A /* Label.swift */; };
 		7F42F90E2B715F4F003B96B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F42F90D2B715F4F003B96B7 /* AppDelegate.swift */; };
 		7F42F9102B715F4F003B96B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F42F90F2B715F4F003B96B7 /* SceneDelegate.swift */; };
-		7F42F9122B715F4F003B96B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F42F9112B715F4F003B96B7 /* ViewController.swift */; };
+		7F42F9122B715F4F003B96B7 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F42F9112B715F4F003B96B7 /* AuthorizationViewController.swift */; };
 		7F42F9152B715F4F003B96B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F42F9132B715F4F003B96B7 /* Main.storyboard */; };
 		7F42F9172B715F50003B96B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F42F9162B715F50003B96B7 /* Assets.xcassets */; };
 		7F42F91A2B715F50003B96B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F42F9182B715F50003B96B7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F0B07DC2B78E5B900B71D9A /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		7F0B07DE2B78EB8400B71D9A /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
+		7F0B07E22B79029A00B71D9A /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		7F0B07E52B7902CA00B71D9A /* IconImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImageView.swift; sourceTree = "<group>"; };
+		7F0B07E72B7902EA00B71D9A /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		7F42F90A2B715F4F003B96B7 /* uikit-dz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uikit-dz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F42F90D2B715F4F003B96B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F42F90F2B715F4F003B96B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F42F9112B715F4F003B96B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F42F9112B715F4F003B96B7 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		7F42F9142B715F4F003B96B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F42F9162B715F50003B96B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F42F9192B715F50003B96B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +47,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F0B07DB2B78E5A600B71D9A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7F42F90D2B715F4F003B96B7 /* AppDelegate.swift */,
+				7F42F9132B715F4F003B96B7 /* Main.storyboard */,
+				7F42F9182B715F50003B96B7 /* LaunchScreen.storyboard */,
+				7F42F91B2B715F50003B96B7 /* Info.plist */,
+				7F42F9162B715F50003B96B7 /* Assets.xcassets */,
+				7F42F90F2B715F4F003B96B7 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7F0B07E42B7902BA00B71D9A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7F0B07DC2B78E5B900B71D9A /* DividerView.swift */,
+				7F0B07E52B7902CA00B71D9A /* IconImageView.swift */,
+				7F0B07E72B7902EA00B71D9A /* Label.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		7F42F9012B715F4F003B96B7 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +89,11 @@
 		7F42F90C2B715F4F003B96B7 /* uikit-dz */ = {
 			isa = PBXGroup;
 			children = (
-				7F42F90D2B715F4F003B96B7 /* AppDelegate.swift */,
-				7F42F90F2B715F4F003B96B7 /* SceneDelegate.swift */,
-				7F42F9112B715F4F003B96B7 /* ViewController.swift */,
-				7F42F9132B715F4F003B96B7 /* Main.storyboard */,
-				7F42F9162B715F50003B96B7 /* Assets.xcassets */,
-				7F42F9182B715F50003B96B7 /* LaunchScreen.storyboard */,
-				7F42F91B2B715F50003B96B7 /* Info.plist */,
+				7F0B07E42B7902BA00B71D9A /* Components */,
+				7F0B07DB2B78E5A600B71D9A /* App */,
+				7F42F9112B715F4F003B96B7 /* AuthorizationViewController.swift */,
+				7F0B07DE2B78EB8400B71D9A /* BirthdayViewController.swift */,
+				7F0B07E22B79029A00B71D9A /* NewUserViewController.swift */,
 			);
 			path = "uikit-dz";
 			sourceTree = "<group>";
@@ -181,9 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F42F9122B715F4F003B96B7 /* ViewController.swift in Sources */,
+				7F0B07DF2B78EB8400B71D9A /* BirthdayViewController.swift in Sources */,
+				7F0B07E62B7902CA00B71D9A /* IconImageView.swift in Sources */,
+				7F42F9122B715F4F003B96B7 /* AuthorizationViewController.swift in Sources */,
 				7F42F90E2B715F4F003B96B7 /* AppDelegate.swift in Sources */,
+				7F0B07DD2B78E5B900B71D9A /* DividerView.swift in Sources */,
 				7F42F9102B715F4F003B96B7 /* SceneDelegate.swift in Sources */,
+				7F0B07E82B7902EA00B71D9A /* Label.swift in Sources */,
+				7F0B07E32B79029A00B71D9A /* NewUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "uikit-dz/Info.plist";
+				INFOPLIST_FILE = "uikit-dz/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -365,7 +401,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "uikit-dz/Info.plist";
+				INFOPLIST_FILE = "uikit-dz/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
