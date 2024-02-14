@@ -3,7 +3,7 @@
 
 import UIKit
 
-/// класс
+/// класс для регистрации меню
 final class RegistrationMenu: UIViewController {
     var nameSignboardImageView = UIImageView()
     var markImageView = UIImageView()
