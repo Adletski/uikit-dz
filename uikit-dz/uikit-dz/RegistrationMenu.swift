@@ -196,7 +196,7 @@ final class RegistrationMenu: UIViewController {
         viewLayer.addSubview(subtextLabel)
     }
 
-    /// настройка фона
+    /// настройка фона view
     private func setupView() {
         viewBackground = UIView(frame: CGRect(x: 311, y: 147, width: 44, height: 44))
         viewBackground.backgroundColor = UIColor(red: 89 / 255, green: 190 / 255, blue: 199 / 255, alpha: 1)
