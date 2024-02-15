@@ -3,7 +3,7 @@
 
 import UIKit
 
-/// класс
+/// Ствртовая точка в хода в приложение
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = RegistrationScreen()
+        window?.rootViewController = RegistrationScreenUser()
         window?.makeKeyAndVisible()
     }
 }
