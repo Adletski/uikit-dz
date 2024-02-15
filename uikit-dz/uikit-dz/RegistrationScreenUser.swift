@@ -139,7 +139,8 @@ final class RegistrationScreenUser: UIViewController {
     }
 
     @objc private func translition() {
-        let example = Menu()
+        let example = UINavigationController(rootViewController: Menu())
+        example.modalPresentationStyle = .fullScreen
         present(example, animated: true)
     }
 
