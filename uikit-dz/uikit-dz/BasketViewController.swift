@@ -5,12 +5,9 @@ import UIKit
 
 // Экран с корзиной товаров
 final class BasketViewController: UIViewController {
-    // MARK: - Private properties
+    var basketArray: [MyInfoModel] = []
 
-    private let tabBar: UITabBarItem = {
-        let tabBar = UITabBarItem(title: "Корзина", image: UIImage(named: "basket"), tag: 0)
-        return tabBar
-    }()
+    // MARK: - Private properties
 
     private let shoesView: UIView = {
         let view = UIView()
@@ -206,7 +203,6 @@ final class BasketViewController: UIViewController {
         title = "Корзина"
         view.backgroundColor = .white
         navigationItem.title = "Корзина"
-        tabBarItem = tabBar
 
         view.addSubview(shoesView)
         shoesView.addSubview(shoeImageView)

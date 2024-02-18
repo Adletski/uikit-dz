@@ -11,7 +11,7 @@ final class MyInfoViewController: UIViewController {
     private lazy var nameTextField: TextField = {
         let textField = TextField()
         textField.placeholder = "Имя"
-        textField.backgroundColor = .systemGray5
+        textField.backgroundColor = #colorLiteral(red: 0.9762765765, green: 0.9762765765, blue: 0.9762765765, alpha: 1)
         textField.layer.cornerRadius = 12
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.addTarget(self, action: #selector(valueChanged(sender:)), for: .editingChanged)
@@ -21,7 +21,7 @@ final class MyInfoViewController: UIViewController {
     private lazy var surnameTextField: TextField = {
         let textField = TextField()
         textField.placeholder = "Фамилия"
-        textField.backgroundColor = .systemGray5
+        textField.backgroundColor = #colorLiteral(red: 0.9762765765, green: 0.9762765765, blue: 0.9762765765, alpha: 1)
         textField.layer.cornerRadius = 12
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.addTarget(self, action: #selector(valueChanged(sender:)), for: .editingChanged)
@@ -31,17 +31,18 @@ final class MyInfoViewController: UIViewController {
     private lazy var phoneNumberTextField: TextField = {
         let textField = TextField()
         textField.placeholder = "Номер телефона"
-        textField.backgroundColor = .systemGray5
+        textField.backgroundColor = #colorLiteral(red: 0.9762765765, green: 0.9762765765, blue: 0.9762765765, alpha: 1)
         textField.layer.cornerRadius = 12
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.addTarget(self, action: #selector(phoneValidation(sender:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(valueChanged(sender:)), for: .editingChanged)
         return textField
     }()
 
     private lazy var legSizeTextField: TextField = {
         let textField = TextField()
         textField.placeholder = "Размер ноги"
-        textField.backgroundColor = .systemGray5
+        textField.backgroundColor = #colorLiteral(red: 0.9762765765, green: 0.9762765765, blue: 0.9762765765, alpha: 1)
         textField.layer.cornerRadius = 12
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.addTarget(self, action: #selector(valueChanged(sender:)), for: .editingChanged)
@@ -51,7 +52,7 @@ final class MyInfoViewController: UIViewController {
     private lazy var birthdayTextField: TextField = {
         let textField = TextField()
         textField.placeholder = "Дата рождения"
-        textField.backgroundColor = .systemGray5
+        textField.backgroundColor = #colorLiteral(red: 0.9762765765, green: 0.9762765765, blue: 0.9762765765, alpha: 1)
         textField.layer.cornerRadius = 12
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.addTarget(self, action: #selector(valueChanged(sender:)), for: .editingChanged)
@@ -61,10 +62,11 @@ final class MyInfoViewController: UIViewController {
     private lazy var emailTextField: TextField = {
         let textField = TextField()
         textField.placeholder = "Почта"
-        textField.backgroundColor = .systemGray5
+        textField.backgroundColor = #colorLiteral(red: 0.9762765765, green: 0.9762765765, blue: 0.9762765765, alpha: 1)
         textField.layer.cornerRadius = 12
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.addTarget(self, action: #selector(emailValidation(sender:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(valueChanged(sender:)), for: .editingChanged)
         return textField
     }()
 
@@ -88,12 +90,10 @@ final class MyInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewdidload")
         setupUI()
         setupConstraints()
         showDatePicker()
         nameTextField.becomeFirstResponder()
-        print("MyInfoViewController")
 //        NotificationCenter.default.addObserver(
 //            self,
 //            selector: #selector(keyboardWillShow),
@@ -142,6 +142,7 @@ final class MyInfoViewController: UIViewController {
 
     @objc private func emailValidation(sender: TextField) {
         if let text = sender.text {
+            emailTextField.text = text.lowercased()
             let range = NSRange(location: 0, length: text.utf16.count)
             let regex = try? NSRegularExpression(pattern: #"^\S+@\S+\.\S+$"#, options: [])
             let result = regex?.firstMatch(in: text, options: [], range: range) != nil
@@ -187,6 +188,7 @@ final class MyInfoViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         let dateF = dateFormatter.date(from: birthdayTextField.text ?? "")
+
         delegate?.saveButtonDidTap(
             model: MyInfoModel(
                 name: nameTextField.text ?? "",
@@ -197,7 +199,8 @@ final class MyInfoViewController: UIViewController {
                 email: emailTextField.text
             )
         )
-        navigationController?.popViewController(animated: true)
+        saveButton.isHidden = true
+        view.endEditing(true)
     }
 
     private func setupUI() {

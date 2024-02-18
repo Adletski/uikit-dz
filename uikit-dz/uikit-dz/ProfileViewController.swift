@@ -6,16 +6,16 @@ import UIKit
 final class ProfileViewController: UIViewController {
     // MARK: - Private properties
 
-    private let tabBar: UITabBarItem = {
-        let tabBar = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.fill"), tag: 0)
-        return tabBar
-    }()
-
     private let cardView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = #colorLiteral(red: 0.06042201072, green: 0.06042201072, blue: 0.06042201072, alpha: 1)
         view.layer.cornerRadius = 20
+        view.layer.shadowColor = UIColor.systemGray.cgColor
+        view.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        view.layer.shadowOpacity = 5.0
+        view.layer.masksToBounds = false
+        view.layer.shadowRadius = 5
         return view
     }()
 
@@ -139,8 +139,6 @@ final class ProfileViewController: UIViewController {
         navigationController?.pushViewController(mivc, animated: true)
     }
 
-    func send() {}
-
     // MARK: - Private methods
 
     private func setupUI() {
@@ -163,7 +161,7 @@ final class ProfileViewController: UIViewController {
 
         navigationItem.title = "Профиль"
         navigationItem.backButtonTitle = ""
-        tabBarItem = tabBar
+        navigationController?.navigationBar.tintColor = .black
     }
 
     private func setupConstraints() {
