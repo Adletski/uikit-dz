@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Меню лого.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

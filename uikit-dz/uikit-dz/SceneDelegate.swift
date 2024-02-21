@@ -3,15 +3,19 @@
 
 import UIKit
 
-// UIResponder, UIWindowSceneDelegate
+/// Ствртовая точка в хода в приложение
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-//    var window: UIWindow?
+    var window: UIWindow?
 
     func scene(
-        _: UIScene,
-        willConnectTo _: UISceneSession,
-        options _: UIScene.ConnectionOptions
+        _ scene: UIScene,
+        willConnectTo session: UISceneSession,
+        options connectionOptions: UIScene.ConnectionOptions
     ) {
-//        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = RegistrationScreenUser()
+        window?.makeKeyAndVisible()
     }
 }
