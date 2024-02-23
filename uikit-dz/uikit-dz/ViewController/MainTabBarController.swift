@@ -44,7 +44,7 @@ final class MainTabBarController: UITabBarController {
         setViewControllers([
             UINavigationController(rootViewController: lentaViewController),
             UINavigationController(rootViewController: notificationViewController),
-            profileViewController
+            UINavigationController(rootViewController: profileViewController)
         ], animated: true)
     }
 }

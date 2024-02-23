@@ -5,6 +5,35 @@ import Foundation
 
 // Общий сервис для получения данных с сервера
 final class Service {
+    func getProfilePhotos() -> [String] {
+        [
+            "star1",
+            "star2",
+            "star3",
+            "star4",
+            "star1",
+            "star2",
+            "star3",
+            "star4",
+            "star1",
+            "star2",
+            "star3",
+            "star4",
+            "star1",
+            "star2",
+            "star3",
+            "star4",
+            "star1",
+            "star2",
+            "star3",
+            "star4",
+            "star1",
+            "star2",
+            "star3",
+            "star4"
+        ]
+    }
+
     func getNotificationToday() -> [Photo] {
         [
             Photo(
