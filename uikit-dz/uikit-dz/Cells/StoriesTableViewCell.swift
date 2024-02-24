@@ -204,6 +204,10 @@ final class StoriesTableViewCell: UITableViewCell {
         fatalError()
     }
 
+    func hidePlusButtonAndTitles() {
+        plusButton.isHidden = true
+    }
+
     // MARK: - Private methods
 
     private func setupViews() {
@@ -230,10 +234,11 @@ final class StoriesTableViewCell: UITableViewCell {
     }
 
     private func setupConstraintsScrollView() {
-        scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        scrollView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        scrollView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
 
     private func setupConstraintsStoryImageView() {
