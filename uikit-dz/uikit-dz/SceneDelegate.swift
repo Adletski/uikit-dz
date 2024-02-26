@@ -5,7 +5,7 @@ import UIKit
 
 // UIResponder, UIWindowSceneDelegate
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-//    var window: UIWindow?
+    var window: UIWindow?
 
     func scene(
         _: UIScene,
